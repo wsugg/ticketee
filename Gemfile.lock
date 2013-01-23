@@ -144,7 +144,7 @@ PLATFORMS
 DEPENDENCIES
   capybara (~> 1.1.2)
   coffee-rails (~> 3.2.1)
-  dynamic_form (~> 1.1.4)
+  dynamic_form (= 1.1.4)
   jquery-rails
   rails (= 3.2.11)
   rspec-rails (~> 2.11)

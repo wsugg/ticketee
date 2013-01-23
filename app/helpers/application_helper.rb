@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def title(*parts) #<co id="ch03_790_1"/>
+  def title(*parts) 
     unless parts.empty?
      content_for :title do
       (parts << "Ticketee").join(" - ")
