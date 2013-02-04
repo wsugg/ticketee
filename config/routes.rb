@@ -2,6 +2,10 @@ Ticketee::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  resources :projects do
+    resources :tickets
+  end
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -50,14 +54,10 @@ Ticketee::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   root :to => "projects#index"
-
-
+  
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end
-Ticketee::Application.routes.draw do
-resources :projects
 end
