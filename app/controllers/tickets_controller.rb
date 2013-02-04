@@ -3,11 +3,18 @@ class TicketsController < ApplicationController
  before_filter :find_project
  before_filter :find_ticket, :only => [:show, :edit, :update, :destroy]
 
+  def flash_params(p)
+    flash[:notice] = p
+  end
+
   def new
+   flash_params(params)
    @ticket = @project.tickets.build
+   flash[:notice] = "#{@ticket.inspect}"
   end
 
   def create
+   flash_params(params)
    @ticket = @project.tickets.build(params[:ticket])
     if @ticket.save
      flash[:notice] = "Ticket has been created."
