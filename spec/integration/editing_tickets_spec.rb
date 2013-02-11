@@ -4,10 +4,10 @@ require 'spec_helper'
     let!(:ticket) { Factory(:ticket, :project => project) }
      
      before do
-     visit '/'
-     click_link project.name
-     click_link ticket.title
-     click_link "Edit Ticket"
+      visit '/'
+      click_link project.name
+      click_link ticket.title
+      click_link "Edit Ticket"
      end
 
     scenario "Updating a ticket" do
