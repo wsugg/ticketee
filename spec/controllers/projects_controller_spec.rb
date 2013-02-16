@@ -5,7 +5,7 @@ describe ProjectsController do
    
    context "standard users" do
     before do
-    sign_in(:user, user)
+     sign_in(:user, user)
    end
  
    it "cannot access the new action" do
@@ -13,7 +13,7 @@ describe ProjectsController do
      response.should redirect_to('/')
      flash[:alert].should == "You must be an admin to do that."
     end
-   end
+  end
   
   it "displays an error for a missing project" do
    get :show, :id => "not-here"

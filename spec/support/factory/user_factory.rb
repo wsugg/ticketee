@@ -16,6 +16,5 @@ FactoryGirl.define do
    user.update_attribute(:admin, true)
   end
  end
-
- end
+end
 end
