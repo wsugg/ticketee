@@ -10,7 +10,6 @@ require 'spec_helper'
   end
 
   scenario "Listing all projects" do
-   project = Factory.create(:project, :name => "TextMate 2")
    visit '/'
    click_link project.name
    page.current_url.should == project_url(project)
