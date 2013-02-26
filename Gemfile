@@ -42,6 +42,7 @@ gem 'jquery-rails'
 group :test, :development do
 gem 'rspec-rails', '~> 2.11'
 gem 'devise', '2.1.0.rc'
+gem 'cancan', '1.6.7'
 gem 'email_spec', '1.2.1'
 gem 'pry'
 end
