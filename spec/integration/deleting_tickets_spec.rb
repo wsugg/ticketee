@@ -10,6 +10,7 @@ require 'spec_helper'
   end
 
     before do
+     define_permission!(user, "view", project)
      sign_in_as!(user)
      visit '/'
      click_link project.name
