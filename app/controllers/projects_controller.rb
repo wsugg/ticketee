@@ -52,10 +52,10 @@ class ProjectsController < ApplicationController
 
 	private
 	  def find_project
-        @project = Project.for(current_user).find(params[:id])
+        @project = Project.for(current_user).find(params[:project_id])
 	    rescue ActiveRecord::RecordNotFound
 		flash[:alert] = "The project you were looking" +
 		                " for could not be found."
-		redirect_to projects_path
+		redirect_to root_path
 	  end
 end
