@@ -13,9 +13,8 @@ class TicketsController < ApplicationController
   end
 
   def new
-   flash_params(params)
    @ticket = @project.tickets.build
-   flash[:notice] = "#{@ticket.inspect}"
+   3.times { @ticket.assets.build }
   end
 
   def create
